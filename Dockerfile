@@ -9,4 +9,4 @@ ENV HOST=0.0.0.0
 
 EXPOSE 20128
 
-CMD ["9router", "-p", "20128", "-H", "0.0.0.0", "-n", "--skip-update"]
+ENTRYPOINT ["sh", "-c", "exec 9router -p ${PORT:-20128} -H 0.0.0.0 -n --skip-update"]

@@ -6,9 +6,8 @@
     region: ohio
     envVars:
       - key: PORT
-        value: 20128
+        value: 10000
       - key: HOST
         value: 0.0.0.0
       - key: NODE_ENV
         value: production
-    healthCheckPath: /health
