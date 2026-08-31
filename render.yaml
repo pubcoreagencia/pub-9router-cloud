@@ -1,0 +1,14 @@
+﻿services:
+  - type: web
+    name: pub-9router-cloud
+    runtime: docker
+    plan: free
+    region: ohio
+    envVars:
+      - key: PORT
+        value: 20128
+      - key: HOST
+        value: 0.0.0.0
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /health
