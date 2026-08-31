@@ -1,0 +1,11 @@
+﻿{
+  "name": "pub-9router-cloud",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "9router -p $PORT -H 0.0.0.0 -n --skip-update"
+  },
+  "dependencies": {
+    "9router": "latest"
+  }
+}
