@@ -6,6 +6,7 @@ RUN npm install -g 9router
 
 ENV PORT=20128
 ENV HOST=0.0.0.0
+ENV INITIAL_PASSWORD=pubdevloop2026
 
 EXPOSE 20128
 
