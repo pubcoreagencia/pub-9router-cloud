@@ -1,4 +1,4 @@
-﻿FROM node:20-slim
+FROM node:20-slim
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ RUN npm install -g 9router
 
 ENV PORT=20128
 ENV HOST=0.0.0.0
-ENV INITIAL_PASSWORD=pubdevloop2026
+# ENV INITIAL_PASSWORD is set via environment variable at runtime
 
 # Copy encrypted database backup and decrypt script
 COPY encrypted-db.enc /app/encrypted-db.enc

@@ -1,4 +1,4 @@
-﻿services:
+services:
   - type: web
     name: pub-9router-cloud
     runtime: docker
@@ -6,10 +6,9 @@
     region: ohio
     envVars:
       - key: PORT
-        value: 10000
+        value: 20128
       - key: HOST
         value: 0.0.0.0
       - key: NODE_ENV
         value: production
-      - key: INITIAL_PASSWORD
-        value: pubdevloop2026
+      # INITIAL_PASSWORD is set via environment variable at runtime

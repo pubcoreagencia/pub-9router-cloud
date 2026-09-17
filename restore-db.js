@@ -1,7 +1,11 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const crypto = require('crypto');
 
-const secretKey = process.env.DB_SECRET || "pubdevloop2026";
+if (!process.env.DB_SECRET) {
+  console.error('MISSING_REQUIRED_SECRET: DB_SECRET environment variable is required');
+  process.exit(1);
+}
+const secretKey = process.env.DB_SECRET;
 const algorithm = 'aes-256-cbc';
 const key = crypto.scryptSync(secretKey, 'salt', 32);
 
